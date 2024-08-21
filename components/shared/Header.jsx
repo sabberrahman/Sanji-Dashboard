@@ -19,7 +19,7 @@ export const Header = () => {
       {/* when user is logOut show this */}
       <SignedOut> 
         <Button asChild className='rounded-full' size="lg">
-         <Link href={"/sign-in"}>Sign 4 Free</Link>
+         <Link href={"/sign-in"}>Try for Free</Link>
         </Button>
       </SignedOut>
      {/*when user signed in  */}

@@ -23,7 +23,7 @@ function Sidebar() {
         id:3,
         name:"Expenses",
         icon:ReceiptText,
-        path:"/dashboard/expenses"
+        path:"/dashboard/expenses/"
     },
     {
         id:4,
