@@ -7,7 +7,7 @@ import { db } from '@/utils/dbConfig'
 import { Budgets, Expenses } from '@/utils/schema'
 import { useUser } from '@clerk/nextjs'
 import { desc, eq, getTableColumns, sql } from 'drizzle-orm'
-import { PenBoxIcon, Trash2 } from 'lucide-react'
+import { ArrowLeft, PenBoxIcon, Trash2 } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import {
   AlertDialog,
@@ -76,10 +76,14 @@ function ExpensesBoard({params}) {
     route.replace("/dashboard/budgets")
   }
 
+  const lastPage=()=>{
+   route.back()
+  }
+
   return (
     <div className='p-10 '>
         <div className=' flex justify-between items-center flex-col md:flex-row gap-2'>
-         
+         <div className='text-2xl font-bold flex gap-2 items-center'> <ArrowLeft onClick={lastPage} className=''/><h2>Budget & Expenses</h2></div>
          <div className="flex items-center gap-2">
            
           <EditBudget budgetInfo={budgetInfo}
@@ -118,7 +122,7 @@ function ExpensesBoard({params}) {
         </div>
 
         <div className="mt-4">
-          <h2 className='font-bold text-lg'>lastest Expenses</h2>
+          
           <ExpenseListTable expenseList={expenseList} 
           refreshData={()=>getBudgetInfo()}/>
         </div>

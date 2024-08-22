@@ -36,8 +36,8 @@ function Sidebar() {
 const path=usePathname()
   return (
     <div className='h-screen'>
-       <Image src="/next.svg" alt='logo' width={160} height={100} className='ml-2 mt-4'/>
-        <div className="mt-5">
+       <Image src="/next.svg" alt='logo' width={160} height={100} className='ml-2 mt-10'/>
+        <div className="mt-20">
             {menuList.map((menu,index)=>(
                 <Link href={menu.path} key={index}>
                         <h2 key={index} className={`flex  gap-2 items-center text-gray-500 font-medium p-5 rounded-md mb-2 cursor-pointer hover:text-red-600 hover:bg-red-200 ${path==menu.path && "text-red-600 bg-red-200"}`}>

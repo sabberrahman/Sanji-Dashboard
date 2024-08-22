@@ -21,7 +21,7 @@ function ExpenseListTable({expenseList,refreshData}) {
     }
   return (
     <div className='mt-3'>
-       <h2 className='text-2xl font-bold mb-2'>My Expenses</h2>
+       <h2 className='text-xl font-bold mb-2 mt-4'>My Expenses</h2>
         <div className="grid grid-cols-4 bg-slate-200 p-2">
             <h2 className='font-bold'>Name</h2>
             <h2 className='font-bold'>Amount</h2>

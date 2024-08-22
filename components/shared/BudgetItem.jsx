@@ -5,7 +5,7 @@ function BudgetItem({budget}) {
 
     const progressBarCalculate=()=>{
         const percentage=(budget.totalSpend/budget.amount)*100
-        return percentage.toFixed(2)
+        return  Math.min(percentage, 100).toFixed(2);
     }
   return (
     <Link href={"/dashboard/expenses/"+budget?.id} >
