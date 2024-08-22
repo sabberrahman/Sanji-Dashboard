@@ -6,33 +6,35 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-function Sidebar() {
-    const menuList=[{
-        id:1,
-        name:"Dashboard",
-        icon:LayoutGrid,
-        path:"/dashboard"
-    },
-    {
-        id:2,
-        name:"Budgets",
-        icon:PiggyBank,
-        path:"/dashboard/budgets"
-    },
-    {
-        id:3,
-        name:"Expenses",
-        icon:ReceiptText,
-        path:"/dashboard/expenses"
-    },
-    {
-        id:4,
-        name:"Upgrade",
-        icon:ShieldCheck,
-        path:"/dashboard/upgrade"
-    }
+export const menuList=[{
+    id:1,
+    name:"Dashboard",
+    icon:LayoutGrid,
+    path:"/dashboard"
+},
+{
+    id:2,
+    name:"Budgets",
+    icon:PiggyBank,
+    path:"/dashboard/budgets"
+},
+{
+    id:3,
+    name:"Expenses",
+    icon:ReceiptText,
+    path:"/dashboard/expenses"
+},
+{
+    id:4,
+    name:"Upgrade",
+    icon:ShieldCheck,
+    path:"/dashboard/upgrade"
+}
 
 ]
+
+function Sidebar() {
+  
 const path=usePathname()
   return (
     <div className='h-screen'>
