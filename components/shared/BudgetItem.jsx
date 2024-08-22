@@ -8,8 +8,10 @@ function BudgetItem({budget}) {
         return percentage.toFixed(2)
     }
   return (
-    <Link href={"/dashboard/expenses/"+budget?.id} className='p-5 border rounded-lg hover:shadow-md cursor-pointer h-[175px]'>
-        <div className="flex items-center gap-2 justify-between">
+    <Link href={"/dashboard/expenses/"+budget?.id} >
+        <div className='p-5 border rounded-lg hover:shadow-md cursor-pointer h-[175px]'>
+            
+      <div className="flex items-center gap-2 justify-between">
         <div className="flex gap-2 items-center">
             <h2 className='text-2xl p-3 px-4 bg-slate-100 rounded-full'>{budget?.icon}</h2>
             <div className="">
@@ -31,6 +33,8 @@ function BudgetItem({budget}) {
 
             </div>
         </div>
+
+         </div>
     </Link>
   )
 }

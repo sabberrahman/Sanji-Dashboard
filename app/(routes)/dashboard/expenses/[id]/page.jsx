@@ -79,7 +79,7 @@ function ExpensesBoard({params}) {
   return (
     <div className='p-10 '>
         <div className=' flex justify-between items-center flex-col md:flex-row gap-2'>
-          <h2 className='text-2xl font-bold'>My Expenses</h2>
+         
          <div className="flex items-center gap-2">
            
           <EditBudget budgetInfo={budgetInfo}

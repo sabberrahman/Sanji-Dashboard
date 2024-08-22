@@ -26,7 +26,7 @@ function BudgetList() {
     .groupBy(Budgets.id)
     .orderBy(desc(Budgets.id))
     setBudgetList(result)
-    console.log(result);
+    
   }
   return (
     <div className='mt-10'>
