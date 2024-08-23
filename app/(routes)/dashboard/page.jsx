@@ -9,6 +9,7 @@ import BarChartDash from '@/components/shared/BarChartDash';
 import BudgetItem from '../../../components/shared/BudgetItem';
 import ExpenseListTable from '@/components/shared/ExpenseListTable';
 import PleaseSignIn from '@/components/shared/PleaseSignIn';
+import PleaseAddData from '@/components/shared/PleaseAddData';
 
  const Dashboard = () => {
   const {user}=useUser()
@@ -62,6 +63,10 @@ import PleaseSignIn from '@/components/shared/PleaseSignIn';
         {!user&& <div>
           <PleaseSignIn/>
         </div>}
+
+        {user&& budgetList.length<1 && (<div>
+          <PleaseAddData/>
+        </div>)}
 
         <CardInfoDashboard budgetList={budgetList}/>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 mt-6">

@@ -1,4 +1,4 @@
-import { TrendingUp } from "lucide-react";
+import { LoaderCircle, TrendingUp } from "lucide-react";
 import { Bar, BarChart, XAxis, YAxis, linearGradient, stop } from 'recharts';
 
 import {
@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/chart";
 import { useEffect, useState } from "react";
 import CardPhotoExpense from "./CardPhotoExpense";
+import PleaseAddData from "./PleaseAddData";
 
 const chartConfig = {
   visitors: {
@@ -91,9 +92,13 @@ export default function AreaChartExpense({ expenseList }) {
           </CardContent>
         </Card>
       ) : (
-        <div>
-          <h1>Loading chart data.....</h1>
-        </div>
+        <div className='flex flex-col gap-5 items-center justify-center'>
+        <p className='text-2xl  font-semibold flex items-center'> Chart Data Loading...<LoaderCircle className="animate-spin"/> </p> 
+        <p className='text-sm font-semibold text-black/90 mt-10 text-center'>if chart is not displaying Maybe you need to Add Expense for in your Created Budget</p>
+        <p className='text-sm font-semibold text-black/90 mt-0 text-center'> Make sure to add expense to use all chart Functionailty </p>
+        <PleaseAddData/>
+
+    </div>
       )}
 
       <div className="ml-2 rounded-lg mt-2 md:mt-0">

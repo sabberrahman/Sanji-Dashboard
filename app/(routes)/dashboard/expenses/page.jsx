@@ -6,6 +6,7 @@ import { desc, eq, getTableColumns, sql } from 'drizzle-orm'
 import { Budgets, Expenses } from '@/utils/schema';
 import AreaChartExpense from '@/components/shared/AreaChartExpense'
 import ExpenseListTable from '@/components/shared/ExpenseListTable';
+import PleaseAddData from '@/components/shared/PleaseAddData';
 
 
 function page() {
@@ -48,14 +49,12 @@ function page() {
 
   return (
     <div className='mt-8'>
-     {expenseList.length > 0 ? (
+    
       <div className="">
         <AreaChartExpense expenseList={expenseList} />
         <ExpenseListTable expenseList={expenseList} refreshData={()=>getAllExpenses()}/>
       </div>
-    ) : (
-      <p>Loading budget data...</p>
-    )}
+    
     </div>
   )
 }
