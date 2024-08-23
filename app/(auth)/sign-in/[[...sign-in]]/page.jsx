@@ -28,13 +28,12 @@ export default function Signin() {
           </svg>
         </a>
 
-        <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-          Welcome to Squid 🦑
+        <h2 className="mt-6 text-2xl font-bold sm:text-3xl md:text-4xl text-black/90 md:text-white/90">
+          Welcome to Shei Dashboard 🦑
         </h2>
 
-        <p className="mt-4 leading-relaxed text-white/90">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam,
-          quibusdam aperiam voluptatum.
+        <p className="mt-4 leading-relaxed  text-black/90 mb-4 md:text-white/90">
+          Only Tool you will ever need to Stay organize . focus on what matters. 
         </p>
       </div>
     </section>

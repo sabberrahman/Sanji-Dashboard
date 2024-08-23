@@ -8,6 +8,7 @@ import CardInfoDashboard from '@/components/shared/CardInfoDashboard';
 import BarChartDash from '@/components/shared/BarChartDash';
 import BudgetItem from '../../../components/shared/BudgetItem';
 import ExpenseListTable from '@/components/shared/ExpenseListTable';
+import PleaseSignIn from '@/components/shared/PleaseSignIn';
 
  const Dashboard = () => {
   const {user}=useUser()
@@ -57,6 +58,10 @@ import ExpenseListTable from '@/components/shared/ExpenseListTable';
           <h2  className='font-bold text-xl text-red-600 flex items-center md:text-2xl'>{user?.fullName} <span>🤠</span> </h2>
         </div>
         <p className='text-lg text-muted-foreground mt-2'>Here whats happening...</p>
+
+        {!user&& <div>
+          <PleaseSignIn/>
+        </div>}
 
         <CardInfoDashboard budgetList={budgetList}/>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 mt-6">

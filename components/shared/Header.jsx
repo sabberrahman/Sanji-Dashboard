@@ -7,7 +7,7 @@ import Link from 'next/link'
 export const Header = () => {
   
   return (
-    <div className='p-5 flex justify-between items-center border-b shadow-sm'>
+    <div className='p-5 flex justify-between items-center  mx-auto max-w-screen-xl px-4 bg-gray-50  sticky top-0 inset-x-0 w-full bg-background/40 backdrop-blur-lg border-b border-border z-50 '>
         <Image
         src="/next.svg"
         alt='logo'

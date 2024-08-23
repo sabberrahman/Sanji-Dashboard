@@ -1,6 +1,6 @@
 "use client"
 import { UserButton } from '@clerk/nextjs'
-import { LayoutGrid, PiggyBank, ReceiptText, ShieldCheck } from 'lucide-react'
+import { FileJson2Icon, LayoutGrid, PiggyBank, ReceiptText, ShieldCheck } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -26,8 +26,8 @@ export const menuList=[{
 },
 {
     id:4,
-    name:"Upgrade",
-    icon:ShieldCheck,
+    name:"Repository",
+    icon:FileJson2Icon,
     path:"/dashboard/upgrade"
 }
 
@@ -38,7 +38,10 @@ function Sidebar() {
 const path=usePathname()
   return (
     <div className='h-screen'>
-       <Image src="/next.svg" alt='logo' width={160} height={100} className='ml-2 mt-10'/>
+        <Link href="/">
+        <Image src="/next.svg" alt='logo' width={160} height={100} className='ml-2 mt-10'/>
+        </Link>
+       
         <div className="mt-20">
             {menuList.map((menu,index)=>(
                 <Link href={menu.path} key={index}>
